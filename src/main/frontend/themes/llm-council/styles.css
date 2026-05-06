@@ -1,0 +1,46 @@
+/* LLM Council Theme */
+
+html {
+  --lumo-primary-color: #6366f1;
+  --lumo-primary-color-50pct: rgba(99, 102, 241, 0.5);
+  --lumo-primary-text-color: #6366f1;
+  --lumo-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  --lumo-border-radius-m: 8px;
+  --lumo-border-radius-l: 12px;
+}
+
+body {
+  background-color: #f3f4f6;
+}
+
+vaadin-app-layout {
+  --vaadin-app-layout-drawer-background: #1a1a2e;
+}
+
+vaadin-button[theme~="primary"] {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+vaadin-text-area::part(input-field) {
+  min-height: 100px;
+}
+
+vaadin-progress-bar {
+  --vaadin-progress-bar-height: 8px;
+}
+
+vaadin-tabs {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+vaadin-tab {
+  border-radius: 6px;
+  padding: 8px 16px;
+}
+
+vaadin-tab[selected] {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

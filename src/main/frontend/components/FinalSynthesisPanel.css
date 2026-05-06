@@ -1,0 +1,34 @@
+.final-response {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.final-response-content {
+  line-height: 1.7;
+}
+
+.final-response-content h1,
+.final-response-content h2,
+.final-response-content h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #1e40af;
+}
+
+.final-response-content h1:first-child,
+.final-response-content h2:first-child {
+  margin-top: 0;
+}
+
+.chairman-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #dbeafe;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #1e40af;
+  margin-top: 1rem;
+}

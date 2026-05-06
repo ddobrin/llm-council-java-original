@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Spring Boot defaults (log patterns, converters, ANSI colors) -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <!-- Non-local profiles: Cloud Logging API appender + console -->
+    <springProfile name="!local">
+        <appender name="CLOUD" class="com.google.cloud.logging.logback.LoggingAppender">
+            <enhancer>dev.council.config.MdcTraceLoggingEnhancer</enhancer>
+            <flushLevel>WARNING</flushLevel>
+        </appender>
+
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="CLOUD"/>
+        </root>
+    </springProfile>
+
+    <!-- Local profile: console only (plain text, human-readable) -->
+    <springProfile name="local">
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
+</configuration>

@@ -1,0 +1,21 @@
+.response-tabs {
+  margin-bottom: 1rem;
+}
+
+.response-content {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.response-meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}

@@ -89,5 +89,5 @@ native/llm-council
 # Maven dependency cache for Cloud Build (populated by scripts/cache-deps.sh)
 .m2-cache/
 
-main/
+
 org/

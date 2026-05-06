@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <!-- WebSocket buffer configuration for large LLM responses -->
+    <!-- Default Tomcat buffer is 8KB, which is too small for Stage 2 peer ranking responses -->
+    <context-param>
+        <param-name>org.apache.tomcat.websocket.textBufferSize</param-name>
+        <param-value>1048576</param-value><!-- 1MB -->
+    </context-param>
+    <context-param>
+        <param-name>org.apache.tomcat.websocket.binaryBufferSize</param-name>
+        <param-value>1048576</param-value><!-- 1MB -->
+    </context-param>
+
+</web-app>

@@ -1,0 +1,74 @@
+council:
+  models:
+    gemini-3-flash-preview:
+      id: "gemini-3-flash-preview"
+      name: "Gemini 3 Flash"
+      provider: "Google"
+      modelId: "gemini-3-flash-preview"
+      avatarColor: "#1da1f2"
+    gemini-3-1-flash-lite-preview:
+      id: "gemini-3.1-flash-lite-preview"
+      name: "Gemini 3.1 Flash Lite"
+      provider: "Google"
+      modelId: "gemini-3.1-flash-lite-preview"
+      avatarColor: "#4285f4"
+    claude-haiku-4-5:
+      id: "claude-haiku-4-5"
+      name: "Claude Haiku 4.5"
+      provider: "Anthropic"
+      modelId: "claude-haiku-4-5"
+      avatarColor: "#d97706"
+
+  available:
+    models:
+      claude-opus-4-6:
+        id: "claude-opus-4-6"
+        name: "Claude Opus 4.6"
+        provider: "Anthropic"
+        modelId: "claude-opus-4-6"
+        avatarColor: "#10a37f"
+      gemini-3-1-pro-preview:
+       id: "gemini-3.1-pro-preview"
+       name: "Gemini 3.1 Pro"
+       provider: "Google"
+       modelId: "gemini-3.1-pro-preview"
+       avatarColor: "#1da1f2"
+      claude-sonnet-4-6:
+        id: "claude-sonnet-4-6"
+        name: "Claude Sonnet 4.6"
+        provider: "Anthropic"
+        modelId: "claude-sonnet-4-6"
+        avatarColor: "#d97706"
+
+  chairman:
+    model: "gemini-3-1-flash-lite-preview"
+
+  title:
+    model: "gemini-3-1-flash-lite-preview"
+
+  summarize:
+    model: "gemini-3-1-flash-lite-preview"
+
+#------------------------------------
+# Additional models - add to council
+
+#    gemini-2.5-pro:
+#      id: "gemini-2.5-pro"
+#      name: "Gemini 2.5 Pro"
+#      provider: "Google"
+#      modelId: "gemini-2.5-pro"
+#      avatarColor: "#4285f4"
+#
+#    gemini-2.5-flash:
+#      id: "gemini-2.5-flash"
+#      name: "Gemini 2.5 Flash"
+#      provider: "Google"
+#      modelId: "gemini-2.5-flash"
+#      avatarColor: "#1da1f2"
+#
+#    claude-haiku-4-5:
+#      id: "claude-haiku-4-5"
+#      name: "Claude Haiku 4.5"
+#      provider: "Anthropic"
+#      modelId: "claude-haiku-4-5"
+#      avatarColor: "#d97706"
