@@ -1,6 +1,6 @@
 # LLM Council - Java Implementation
 
-A Java implementation evolving the Language Model Council idea presented in the [arXiv paper](https://arxiv.org/pdf/2406.08598) and popularized by [Karpathy's LLM Council](https://github.com/karpathy/llm-council) using Spring Boot 4.0.5, Spring AI 2.0.0-M4, Java 25, and Vaadin Hilla for the UI.
+A Java implementation evolving the Language Model Council idea presented in the [arXiv paper](https://arxiv.org/pdf/2406.08598) and popularized by [Karpathy's LLM Council](https://github.com/karpathy/llm-council) using Spring Boot 4.x, Spring AI 2.0.0, Java 25, and Vaadin Hilla for the UI.
 
 Multiple LLMs deliberate together through a structured 5-stage process: each model answers independently, ranks peers anonymously, identifies agreements and disagreements, and a designated chairman synthesizes the final response.
 
@@ -62,8 +62,8 @@ The REST API also exposes a 3-stage variant via `POST /api/council/quick-consult
 ## Tech Stack
 
 - **Java 25** with preview features enabled
-- **Spring Boot 4.0.5**
-- **Spring AI 2.0.0-M4** — LLM abstraction layer with multi-model support
+- **Spring Boot 4.x**
+- **Spring AI 2.0.0** — LLM abstraction layer with multi-model support
 - **Vaadin Hilla 25.1.0** — Full-stack React + Spring integration with type-safe RPC
 - **Project Reactor** — Reactive streams (`Flux` / `Mono`) for parallel async LLM calls
 - **Caffeine** — In-memory session caching (1000 sessions, 2-hour TTL)
@@ -263,7 +263,9 @@ Three model IDs in `council.yaml` drive non-deliberation work and can each point
 
 Each must reference a model ID present in `council.models` (active) or `council.available.models`. They can all point to the same model.
 
-## Supported Models
+## Tested Models
+
+Some of the models this app has been tested with:
 
 | Model | Provider | Config key | Status |
 |-------|----------|------------|--------|
@@ -277,6 +279,8 @@ Each must reference a model ID present in `council.models` (active) or `council.
 | Gemini 2.5 Flash | Google | `gemini-2.5-flash` | Commented out |
 
 To enable an available model, move its entry from `council.available.models` to `council.models` in `council.yaml`. The corresponding `ChatClient` bean must also be wired in `ChatClientRegistry`.
+
+You can configure any model, as long as it is supported in Spring AI.
 
 ## Environment Variables / API Keys
 
